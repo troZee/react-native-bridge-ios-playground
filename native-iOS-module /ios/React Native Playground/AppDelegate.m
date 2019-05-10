@@ -6,10 +6,16 @@
 @end
 
 @implementation AppDelegate
+@synthesize bridge = _bridge;
 
+static AppDelegate *_shared = nil;
+
++ (AppDelegate *)shared {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
     return YES;
 }
 
@@ -38,6 +44,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
+    return [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
 }
 
 

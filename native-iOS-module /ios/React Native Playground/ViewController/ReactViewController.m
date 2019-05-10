@@ -1,5 +1,7 @@
 
 #import "ReactViewController.h"
+#import <React/RCTRootView.h>
+#import "AppDelegate.h"
 
 @interface ReactViewController ()
 
@@ -7,11 +9,15 @@
 
 @implementation ReactViewController
 
+@synthesize rootView = _rootView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _rootView = [[RCTRootView alloc] initWithBridge:[[AppDelegate shared] bridge] moduleName:@"App" initialProperties:@{}];
+    self.view = _rootView;
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    
 }
-
 /*
 #pragma mark - Navigation
 

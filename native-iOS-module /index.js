@@ -5,8 +5,9 @@
 
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View, Button, TextInput } from 'react-native';
+import {} from 'react-native';
 
-// import { emitter, sendEmail, sendMFMail, emailEvents } from './EmailModule';
+import { emitter, sendMail, emailEvents } from './EmailModule';
 
 type State = {
   emailAddress: string,
@@ -16,9 +17,7 @@ type State = {
 
 type Props = {};
 export default class App extends Component<Props, State> {
-  // subscription = emitter.addListener(emailEvents.RESULT_CANCELLED, () =>
-  //   console.log('onResultCancelled')
-  // );
+  subscription = emitter.addListener(emailEvents.RESULT_CANCELLED, () => {});
 
   constructor(props: Props) {
     super(props);
@@ -56,21 +55,11 @@ export default class App extends Component<Props, State> {
         <Button
           title="Send Email"
           onPress={() => {
-            // sendEmail(
-            //   this.state.emailAddress,
-            //   this.state.emailTitle,
-            //   this.state.emailContent
-            // );
-          }}
-        />
-        <Button
-          title="Send MF Email"
-          onPress={() => {
-            // sendMFMail(
-            //   this.state.emailAddress,
-            //   this.state.emailTitle,
-            //   this.state.emailContent
-            // );
+            sendMail(
+              this.state.emailAddress,
+              this.state.emailTitle,
+              this.state.emailContent
+            );
           }}
         />
       </View>

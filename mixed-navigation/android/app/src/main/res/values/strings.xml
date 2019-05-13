@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IntegrationApp</string>
+    <string name="title_native">Native</string>
+    <string name="title_react">React</string>
+    <string name="title_activity_main_tab">MainTabActivity</string>
+    <string name="tab_text_native">Native</string>
+    <string name="tab_text_react">React</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

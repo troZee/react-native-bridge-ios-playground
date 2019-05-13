@@ -1,0 +1,37 @@
+{
+  "name": "IntegrationApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn react-native start"
+  },
+  "dependencies": {
+    "@babel/register": "^7.4.0",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "react": "16.8.3",
+    "react-native": "^0.59.5",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-paper": "^2.15.2",
+    "react-native-star-rating": "^1.1.0",
+    "react-native-vector-icons": "^6.4.2",
+    "react-navigation": "^3.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/runtime": "7.4.3",
+    "@callstack/eslint-config": "^4.2.0",
+    "babel-jest": "24.7.1",
+    "detox": "^12.4.0",
+    "eslint": "^5.16.0",
+    "flow-bin": "^0.93.0",
+    "husky": ">=1",
+    "jest": "^24.7.1",
+    "lint-staged": ">=8",
+    "metro-react-native-babel-preset": "0.53.1",
+    "prettier": "^1.17.0",
+    "react-native-testing-library": "^1.7.0",
+    "react-test-renderer": "16.8.3"
+  }
+}

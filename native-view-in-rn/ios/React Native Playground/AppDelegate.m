@@ -47,7 +47,7 @@ static AppDelegate *_shared = nil;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
-    return [NSURL URLWithString:@"http://192.168.1.225:8081/index.bundle?platform=ios"];
+    return [NSURL URLWithString:@"http://change.ip:8081/index.bundle?platform=ios"];
 }
 
 

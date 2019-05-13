@@ -1,4 +1,4 @@
-# react-native-playground
+# react-native-bridge-ios-playground
 
 **⚠️⚠️⚠️ WARNING ⚠️⚠️⚠️** This playground only contains iOS part. Feel free, if you want to implement android part. 
 
